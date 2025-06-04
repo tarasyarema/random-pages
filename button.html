@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .profile-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .icon {
+            font-size: 20px;
+        }
+
+        .editBtn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+            border-radius: 6px;
+            transition: background-color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .editBtn:hover {
+            background-color: #f0f0f0;
+        }
+
+        .edit-icon {
+            width: 18px;
+            height: 18px;
+            stroke: #666;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .section-content {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .skill-tag {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="profile-avatar">👨‍💻</div>
+            <h1>John Doe</h1>
+            <p>Software Engineer</p>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>
+                    <div class="section-title">
+                        <span class="icon">📜</span>
+                        Short bio
+                    </div>
+                    <button class="editBtn">
+                        <svg class="edit-icon" viewBox="0 0 24 24">
+                            <path d="m18 2 4 4-14 14H4v-4L18 2z" />
+                            <path d="m14.5 5.5 3 3" />
+                        </svg>
+                    </button>
+                </h2>
+                <div class="section-content">
+                    I'm a SWE with 5+ years of experience building scalable web applications. Passionate about clean
+                    code, user experience, and continuous learning.
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>
+                    <div class="section-title">
+                        <span class="icon">💼</span>
+                        Experience
+                    </div>
+                    <button class="editBtn">
+                        <svg class="edit-icon" viewBox="0 0 24 24">
+                            <path d="m18 2 4 4-14 14H4v-4L18 2z" />
+                            <path d="m14.5 5.5 3 3" />
+                        </svg>
+                    </button>
+                </h2>
+                <div class="section-content">
+                    <strong>Senior Software Engineer</strong> at TechCorp (2022 - Present)<br>
+                    Leading frontend development for enterprise applications using React and TypeScript.
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>
+                    <div class="section-title">
+                        <span class="icon">🛠️</span>
+                        Skills
+                    </div>
+                    <button class="editBtn">
+                        <svg class="edit-icon" viewBox="0 0 24 24">
+                            <path d="m18 2 4 4-14 14H4v-4L18 2z" />
+                            <path d="m14.5 5.5 3 3" />
+                        </svg>
+                    </button>
+                </h2>
+                <div class="section-content">
+                    <div class="skill-tags">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">AWS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>
+                    <div class="section-title">
+                        <span class="icon">🎓</span>
+                        Education
+                    </div>
+                    <button class="editBtn">
+                        <svg class="edit-icon" viewBox="0 0 24 24">
+                            <path d="m18 2 4 4-14 14H4v-4L18 2z" />
+                            <path d="m14.5 5.5 3 3" />
+                        </svg>
+                    </button>
+                </h2>
+                <div class="section-content">
+                    <strong>Bachelor of Science in Computer Science</strong><br>
+                    University of Technology (2015 - 2019)
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>
+                    <div class="section-title">
+                        <span class="icon">📞</span>
+                        Contact
+                    </div>
+                    <button class="editBtn">
+                        <svg class="edit-icon" viewBox="0 0 24 24">
+                            <path d="m18 2 4 4-14 14H4v-4L18 2z" />
+                            <path d="m14.5 5.5 3 3" />
+                        </svg>
+                    </button>
+                </h2>
+                <div class="section-content">
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <span>john.doe@email.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>🔗</span>
+                        <span>linkedin.com/in/johndoe</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>🐙</span>
+                        <span>github.com/johndoe</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add click handlers for edit buttons
+        document.querySelectorAll('.editBtn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const section = this.closest('.section');
+                const sectionTitle = section.querySelector('.section-title').textContent.trim();
+                alert(`Edit ${sectionTitle} section`);
+            });
+        });
+    </script>
+</body>
+
+</html>
